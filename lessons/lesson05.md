@@ -171,7 +171,7 @@ webSocket.on("connect", function(socket) {
 ```js
 // 必要なモジュールを読み込む
 var dgram = require("dgram");
-var oscmsg = require("osc-msg");
+var osc = require("osc-msg");
 
 // 受信ポートの設定
 var OSC_RECV_PORT = 7400;
@@ -203,6 +203,10 @@ recvOSCSocket.on("message", function(buffer) {
 ![05-server-04.png](../assets/images/05-server-04.png)
 
 ```js
+// 必要なモジュール（読み込み済み）
+// var dgram = require("dgram");
+// var osc = require("osc-msg");
+
 // 送信ポートの設定
 var OSC_SEND_PORT = 7401;
 
@@ -228,4 +232,6 @@ function sendOSCMessage(msg) {
 4. 動作確認用に `quizzes/lesson05/echo.maxpat` を使用する
 
 ---
-更新日付：2016-06-10
+更新日付：2016-06-12
+- 2016-06-12：サンプルコードのtypo修正、コメント追加
+- 2016-06-10：初稿

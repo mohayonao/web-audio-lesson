@@ -296,4 +296,6 @@ sched.start(compose, { beat: 0 });
 ![04-audiograph-synth.png](../assets/images/04-audiograph-synth.png)
 
 ---
-更新日付：2016-06-10
+更新日付：2016-06-12
+- 2016-06-12：課題の図表を更新
+- 2016-06-10：初稿
