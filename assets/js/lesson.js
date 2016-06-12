@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     prettyPrint();
 
-    document.body.scrollTop = 0;
+    window.scrollTo(0, 0);
   }
 
   function onhashchange() {
