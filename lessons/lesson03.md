@@ -98,12 +98,12 @@ _このテキストではあらかじめ4つのオーディオサンプルを読
 
 ### AudioBufferのパラメーター
 
-| 名前 | データ型 | 説明 |
-|------|----------|-
-| sampleRate | number | サンプルレート
-| length | number | バッファーのサンプル数
-| duration | number | バッファーの時間（秒）
-| numberOfChannels | number | バッファーのチャネル数
+| 名前             | データ型 | 説明                   |
+|------------------|----------|------------------------|
+| sampleRate       | number   | サンプルレート         |
+| length           | number   | バッファーのサンプル数 |
+| duration         | number   | バッファーの時間（秒） |
+| numberOfChannels | number   | バッファーのチャネル数 |
 
 `AudioBuffer`のデータは`getChannelData()`メソッドを使って取得することができます。
 
@@ -117,13 +117,13 @@ audioBuffer.getChannelData(0);
 
 ### AudioBufferSourceNodeのパラメーター
 
-| 名前 | データ型 | 説明 |
-|------|----------|-
-| buffer | AudioBuffer | 再生するバッファー
-| playbackRate | AudioParam | 再生速度
-| loop | boolean | ループのON/OFF
-| loopStart | number | ループの開始位置（秒）
-| loopEnd | number | ループの終了位置（秒）
+| 名前         | データ型    | 説明                   |
+|--------------|-------------|------------------------|
+| buffer       | AudioBuffer | 再生するバッファー     |
+| playbackRate | AudioParam  | 再生速度               |
+| loop         | boolean     | ループのON/OFF         |
+| loopStart    | number      | ループの開始位置（秒） |
+| loopEnd      | number      | ループの終了位置（秒） |
 
 `AudioBufferSourceNode`は`AudioBuffer`インスタンスを再生するためのオーディオノードです。`OscillatorNode`と同じように「音源」に分類されます。`start()`メソッドで再生を開始します。
 
@@ -232,4 +232,6 @@ function midiratio(midi) {
 3. 読み込んだオーディオサンプルは`instruments[]`配列に代入する
 
 ---
-更新日付：2016-06-10
+更新日付：2016-06-13
+- 2016-06-13：テーブルの崩れを修正
+- 2016-06-10：初稿

@@ -17,11 +17,11 @@ var audioContext = new AudioContext();
 
 オーディオコンテキストの主なパラメーターには次のものがあります。たとえば、オーディオコンテキストの経過時刻は`audioContext.currentTime`で参照できます。
 
-| 名前        | データ型           | 説明
-|-------------|---------------------|---
-| sampleRate  | double              | オーディオコンテキストのサンプルレート
-| currentTime | double              | オーディオコンテキストの経過時刻（秒単位）
-| destination | AudioDestnationNode | オーディオコンテキストの出力
+| 名前        | データ型            | 説明                                      |
+|-------------|---------------------|-------------------------------------------|
+| sampleRate  | double              | オーディオコンテキストのサンプルレート    |
+| currentTime | double              | オーディオコンテキストの経過時刻（秒単位）|
+| destination | AudioDestnationNode | オーディオコンテキストの出力              |
 
 > #### 補足: SafariのWeb Audio API
 > Safariでは`AudioContext`のコンストラクタに`webkit`というプリフィックスが付けられています。つまり、Safariでオーディオコンテキストを生成する場合は`new AudioContext()`ではなく`new webkitAudioContext()`のように書かなくてはなりません。しかし、プリフィックスが必要かどうかを調べて書き方を変えるのは面倒なので、多くの場合はプログラム冒頭に次のようなコードを書いてプリフィックスがなくても`AudioContext`が使えるようにします。  
@@ -40,17 +40,17 @@ var audioContext = new AudioContext();
 
 よく使われるオーディオノードには次のものがあります。
 
-| 名前                   | 用途          | 種類          | 入力 | 出力  | Max/MSP
-|------------------------|--------------|:------------:|:----:|:----:|
-| OscillatorNode         | オシレーター   | Source       | x    | o     | cycle~, saw~, tri~, rect~
-| AudioBufferSourceNode  | バッファー再生 | Source       | x    | o     |noise~, sfplay~
-| GainNode               | レベル調整     | Intermediate | o    | o     | *~
-| BiquadFilterNode       | フィルター     | Intermediate | o    | o     | biquad~
-| DelayNode              | ディレイ       | Intermediate | o    | o     | delay~
-| WaveShaperNode         | 非線形変換     | Intermediate | o    | o     | lookup~
-| ConvolverNode          | 畳み込み       | Intermediate | o    | o     |
-| AnalyserNode           | 波形分析      | Analyser     | o    | o     | scope~, spectroscope~
-| AudioDestnationNode    | 出力          | Destination  | o    | x     | dac~
+| 名前                   | 用途           | 種類         | 入力 | 出力  | Max/MSP                   |
+|------------------------|----------------|:------------:|:----:|:-----:|---------------------------|
+| OscillatorNode         | オシレーター   | Source       | x    | o     | cycle~, saw~, tri~, rect~ |
+| AudioBufferSourceNode  | バッファー再生 | Source       | x    | o     | noise~, sfplay~           |
+| GainNode               | レベル調整     | Intermediate | o    | o     | *~                        |
+| BiquadFilterNode       | フィルター     | Intermediate | o    | o     | biquad~                   |
+| DelayNode              | ディレイ       | Intermediate | o    | o     | delay~                    |
+| WaveShaperNode         | 非線形変換     | Intermediate | o    | o     | lookup~                   |
+| ConvolverNode          | 畳み込み       | Intermediate | o    | o     |                           |
+| AnalyserNode           | 波形分析       | Analyser     | o    | o     | scope~, spectroscope~     |
+| AudioDestnationNode    | 出力           | Destination  | o    | x     | dac~                      |
 
 オーディオノードの生成にはオーディオコンテキストのメソッドを使います。
 
@@ -212,4 +212,6 @@ for (var i = 0; i < 16; i++) {
 ![01-audiograph-Q.png](../assets/images/01-audiograph-Q.png)
 
 ---
-更新日付：2016-06-10
+更新日付：2016-06-13
+- 2016-06-13：テーブルの崩れを修正
+- 2016-06-10：初稿
