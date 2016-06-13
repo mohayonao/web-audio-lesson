@@ -1,7 +1,7 @@
 {
   "name": "web-audio-lesson",
   "description": "web audio lesson at 2016-06-11",
-  "version": "2016.06.12",
+  "version": "2016.06.13",
   "author": "Nao Yonamine <mohayonao@gmail.com>",
   "dependencies": {
     "express": "^4.13.4",
